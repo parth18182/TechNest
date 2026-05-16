@@ -1,7 +1,7 @@
 import { count } from "console";
 import razorpayInstance from "../config/razorpay.js";
 import { CartModel } from "../models/cartModel.js";
-import { OrderModel } from "../models/OrderModel.js";
+import { OrderModel } from "../models/orderModel.js";
 import crypto from "crypto";
 import UserModel from "../models/user.js";
 import ProductModel from "../models/productModel.js";

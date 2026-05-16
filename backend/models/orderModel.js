@@ -46,4 +46,4 @@ const orderSchema = new mongoose.Schema({
     razorpaySignature: { type: String }
 }, { timestamps: true });
 
-export const OrderModel = mongoose.model("Order", orderSchema)
+export const OrderModel = mongoose.models.Order || mongoose.model("Order", orderSchema);
