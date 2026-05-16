@@ -82,7 +82,7 @@ function Profile() {
                 formData.append("file", file);
             }
 
-            const res = await axios.put(`http://localhost:5000/api/users/updateuser/${userId}`, formData, {
+            const res = await axios.put(`${import.meta.env.VITE_URL}/api/users/updateuser/${userId}`, formData, {
                 headers: {
                     Authorization: `Bearer ${accessToken}`,
                     "Content-Type": "multipart/form-data",

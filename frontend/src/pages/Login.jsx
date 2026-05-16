@@ -42,7 +42,7 @@ function Login() {
     console.log(formData)
     try {
       setLoading(true)
-      const res = await axios.post('http://localhost:5000/api/users/login', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_URL}/api/users/login`, formData, {
         headers: {
           "Content-type": "application/json"
         }

@@ -19,7 +19,7 @@ function Cart() {
   const tax = subtotal * 0.05;
   const total = subtotal + shipping + tax
   const navigate = useNavigate()
-  const API = "http://localhost:5000/api/cart"
+  const API = `${import.meta.env.VITE_URL}/api/cart`
   const dispatch = useDispatch();
   const accessToken = localStorage.getItem("accessToken")
   const loadCart = async ()=>{
