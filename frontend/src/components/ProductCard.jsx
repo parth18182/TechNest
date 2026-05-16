@@ -16,7 +16,7 @@ function ProductCard({ product, loading }) {
 
     const addToCart = async (productId) => {
         try {
-            const res = await axios.post(`http://localhost:5000/api/cart/add`, { productId }, {
+            const res = await axios.post(`${import.meta.env.VITE_URL}/api/cart/add`, { productId }, {
                 headers: {
                     Authorization: `Bearer ${accessToken}`
                 }
