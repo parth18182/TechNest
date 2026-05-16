@@ -1,4 +1,4 @@
-import { OrderModel } from "../models/OrderModel.js";
+import { OrderModel } from "../models/orderModel.js";
 import ProductModel from "../models/productModel.js";
 import cloudinary from "../utilis/cloudinary.js";
 import getDataUri from "../utilis/dataUri.js";
