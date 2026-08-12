@@ -4,12 +4,12 @@ import 'dotenv/config';
 const verifyEmail = async (token, email) => {
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
-        auth: { 
+        auth: {
             user: process.env.MAIL_USER,
             pass: process.env.MAIL_PASS
         }
     });
-    
+
     const mailConfiguration = {
         from: process.env.MAIL_USER,
         to: email,
@@ -20,7 +20,7 @@ const verifyEmail = async (token, email) => {
         Thank you!`
     };
 
-    transporter.sendMail(mailConfiguration, function(error, info){
+    transporter.sendMail(mailConfiguration, function (error, info) {
         if (error) throw Error(error);
         console.log('Email sent successfully');
         console.log(info);
